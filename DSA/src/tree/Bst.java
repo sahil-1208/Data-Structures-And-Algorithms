@@ -1,6 +1,6 @@
 package tree;
 
-public class BstImpl {
+public class Bst {
     Node root;
 
     class Node {
