@@ -11,6 +11,9 @@ public class ArrayBasics {
         System.out.println("Largest Element : " + largestElement(arr));
         System.out.println("Smallest Element : " + smallestElement(arr));
 
+        reverse(arr);
+        printArray(arr);
+
     }
 
     public static int[] takeInput() {
@@ -51,6 +54,20 @@ public class ArrayBasics {
             }
         }
         return min;
+    }
+
+
+    public static void reverse(int[] arr) {
+        int first = 0;
+        int last = arr.length - 1;
+
+        while (first < last) {
+            int temp = arr[first];
+            arr[first] = arr[last];
+            arr[last] = temp;
+            first++;
+            last--;
+        }
     }
 
 
