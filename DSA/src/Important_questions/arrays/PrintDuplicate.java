@@ -7,7 +7,7 @@ public class PrintDuplicate {
 
     public static void main(String[] args) {
 
-        int[] arr = {1, 3, 2, 4, 6, 7};
+        int[] arr = {1, 3, 4, 3, 5, 1, 2, 2, 4, 6, 7};
 //        int duplicate = printDuplicate(arr);
 //        System.out.println("Duplicate Element is : " + duplicate);
 
@@ -41,6 +41,7 @@ public class PrintDuplicate {
             }
         }
         if (!isDuplicate) {
+            System.out.println(uniqueValue);
             System.out.println("No Duplicate Exist !");
         }
 
