@@ -9,7 +9,7 @@ public class LinkedList {
         linkedList.append(7);
         linkedList.append(8);
         linkedList.append(5);
-        linkedList.prepend(3);
+        linkedList.prepend(3);   // 3 4 7 8 5
 //        linkedList.removeFirst();
 //        linkedList.removeLast();
         System.out.println("Head : " + linkedList.getHead().value);
@@ -19,6 +19,9 @@ public class LinkedList {
 //        System.out.println("Element on the given Index : " + linkedList.get(2).value);
 //        System.out.println("Set Value : " + linkedList.set(2, 9));
 
+        linkedList.printNthFromLast(3);// 7
+
+        linkedList.printMiddleElement();  //7
         System.out.println("LinkedList : ");
         linkedList.printList();
 

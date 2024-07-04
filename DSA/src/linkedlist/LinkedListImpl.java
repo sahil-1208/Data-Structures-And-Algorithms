@@ -137,11 +137,45 @@ public class LinkedListImpl {
         tail = temp;
         Node after = temp.next;
         Node before = null;
-        for(int i = 0; i < length; i++) {
-           after = temp.next;
-           temp.next = before;
-           before = temp;
-           temp = after;
+        for (int i = 0; i < length; i++) {
+            after = temp.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
+        }
+    }
+
+    public void printNthFromLast(int n) {
+        Node refPtr = head;
+        Node mainPtr = head;
+        int count = 0;
+
+        if (head != null) {
+            while (count < n) {
+                if (refPtr == null) {
+                    System.out.println(n + " is greater than the number of nodes in the list");
+                }
+                refPtr = refPtr.next;
+                count++;
+            }
+            while (refPtr != null) {
+                refPtr = refPtr.next;
+                mainPtr = mainPtr.next;
+            }
+        }
+        System.out.println("Node no. " + n + " from the end is : " + mainPtr.value);
+    }
+
+    public void printMiddleElement() {
+        Node fastPtr = head;
+        Node slowPtr = head;
+
+        if (head != null) {
+            while (fastPtr != null && fastPtr.next != null) {
+                fastPtr = fastPtr.next.next;
+                slowPtr = slowPtr.next;
+            }
+            System.out.println("The middle element is : " + slowPtr.value);
         }
     }
 }

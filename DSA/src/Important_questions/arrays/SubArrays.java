@@ -5,9 +5,9 @@ public class SubArrays {
     public static void main(String[] args) {
         int[] arr = {2, 4, 6, 8, 10};
 
-        printSubArray(arr);
+       // printSubArray(arr);
 
-        //maxSubArray(arr);
+        maxSubArray(arr);
 
     }
 
