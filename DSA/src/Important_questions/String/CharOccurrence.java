@@ -1,6 +1,7 @@
 package Important_questions.String;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class CharOccurrence {
 
@@ -13,16 +14,25 @@ public class CharOccurrence {
 
     public static void countOccurrence(String str) {
 
-        HashMap<String, Integer> charMap = new HashMap<>();
+        HashMap<Character, Integer> charMap = new HashMap<>();
 
-        for (String s : str.split(" ")) {
-            if (charMap.containsKey(s)) {
-                charMap.put(s, charMap.get(s) + 1);
+        char[] chars = str.toCharArray();
+
+        for (char ch : chars) {
+
+            if (ch == ' ') continue;
+            if (charMap.containsKey(ch)) {
+                charMap.put(ch, charMap.get(ch) + 1);
             } else {
-                charMap.put(s, 1);
+                charMap.put(ch, 1);
             }
         }
 
-        System.out.println(charMap);
+        System.out.println(" The Occurrence of each Character in this String is : ");
+        for (Map.Entry<Character, Integer> charOccurrence : charMap.entrySet()) {
+            System.out.println(charOccurrence.getKey() + " : " + charOccurrence.getValue());
+        }
+
+
     }
 }
