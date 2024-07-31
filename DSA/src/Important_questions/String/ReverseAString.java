@@ -10,12 +10,32 @@ public class ReverseAString {
 
         Scanner sc = new Scanner(System.in);
 
-        String str = sc.nextLine();;
+        String str = sc.nextLine();
+
+        reverseAString(str);
+
+        // char[] chars = str.toCharArray();
+
+        System.out.println("Reversed String ");
+
+    }
+
+
+    public static void reverseAString(String str) {
 
         char[] chars = str.toCharArray();
 
-        reverseString(chars);
-        System.out.println(chars);
+        int i = 0;
+        int j = chars.length - 1;
+
+        while (i < j) {
+            char temp = chars[i];
+            chars[i] = chars[j];
+            chars[j] = temp;
+            i++;
+            j--;
+        }
+
 
     }
 
